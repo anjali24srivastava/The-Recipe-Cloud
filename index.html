@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe Website | Anjali Srivastava</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Delicious Recipes</h1>
+            <nav>
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <!-- <li><a href="#recipes" class="nav-link">Recipes</a></li> -->
+                    <li><a href="#recipes" class="nav-link" onclick="showAllRecipes()">Recipes</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link ">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- ..................Hero Section.......... -->
+    <section id="home" class="hero">
+        <div class="hero-section">
+            <h2>Welcome to our Recipe Collection !</h2>
+            <p>Search for delicious recipes to satisfy your craving.</p>
+
+            <form  id="searchForm" class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for Recipe">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- ..............Recipe Section............. -->
+    <section id="recipes" class="recipes">
+        <h1>Featured Recipes</h1>
+        <div class="recipe-section">
+            <div class="recipe-card" id="veg-biryani">
+                <img src="images/dish-1.jpg" alt="">
+                <h2> Veg Briyani</h2>
+                <p class="card-text">Sauté onion in olive oil until translucent. Add garlic, ginger, tomatoes, and water; simmer 10 mins. Mix in chopped veggies and spices. Pour in broth, bring to boil. Add rinsed basmati rice, simmer covered on low for 18–20 mins. Let sit 5 mins before serving. Garnish with fresh coriander before serving. Serve hot with raita or pickle for added taste.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipe-card" id="hyderabadi-veg-biryani">
+                <img src="images/dish-2.jpg" alt="">
+                <h2> Hyderabadi Veg Biryani</h2>
+                <p class="card-text">Sauté whole spices, onion, ginger-garlic paste. Add chopped veggies, yogurt, mint, coriander, biryani masala, and cook. Parboil basmati rice with salt and whole spices. Layer rice over the veggie mix. Top with saffron milk, fried onions, mint, and ghee. Seal pot, cook on low (dum) for 20–25 mins.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipe-card" id="non-veg-biryani">
+                <img src="images/dish-3.jpg" alt="">
+                <h2> Non-Veg Biryani</h2>
+                <p class="card-text">Marinate chicken with yogurt, spices, and lemon for 1 hour. Sauté onions, add marinated chicken, cook until 70% done. Parboil basmati rice with whole spices. Layer rice over chicken, top with fried onions, saffron milk, mint, coriander, and ghee. Seal pot and cook on dum (low heat) for 20–25 mins. Rest before serving.</p>
+
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipe-card" id="fried-rice">
+                <img src="images/dish-4.jpg" alt="">
+                <h2> Fried Rice</h2>
+                <p class="card-text">Heat oil in a pan and sauté garlic and onions until fragrant. Add chopped vegetables and cook on high heat until slightly tender. Add cooked rice, soy sauce, pepper, and salt. Stir-fry everything together for 2–3 minutes until well mixed and heated through. Serve hot for a quick delicious meal. Garnish with spring onions for extra flavor.</p>
+
+                <a href="#">View Recipe</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ...........About Section.......... -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p><strong>Welcome to Delicious Recipes!</strong> We are passionate about bringing flavorful, easy-to-follow recipes straight to your kitchen. Whether you're a beginner or a seasoned cook, our curated selection of vegetarian and non-vegetarian dishes offers something for everyone. From traditional biryanis to quick fried rice, each recipe is tested and loved. Our mission is to make home cooking simple, enjoyable, and delicious for all food lovers. Join us on this culinary journey and discover the joy of creating amazing meals at home!</p>
+            <p> –At Delicious Recipes, we celebrate the joy of cooking and the magic of flavors that bring people together. Our goal is to make everyday cooking exciting and approachable, no matter your experience level. We share handpicked recipes that blend tradition with simplicity—from classic Indian favorites to modern quick meals. Every dish on our platform is shared with care, aiming to inspire creativity in your kitchen. We're not just a recipe website—we're a community of food lovers who believe in the warmth of home-cooked meals. Let’s explore, experiment, and enjoy the art of cooking, one recipe at a time.
+
+</p>
+            <p>We believe cooking should be fun, flavorful, and accessible. Explore a variety of vegetarian and non-vegetarian dishes, one-pot wonders, and quick bites all in one place. Let’s make everyday cooking exciting!</p>
+            <p><strong>"Cooking is an art, but all art requires knowing something about the techniques and materials."</strong></p>
+        </div>
+    </section>
+
+
+
+    <!-- ...........Contact Section.......... -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    <!-- .......Footer Section........... -->
+    <footer>
+        <div>
+            <p> Made by Anjali Srivastava | Delicious Recipes | 2025</p>
+        </div>
+    </footer>
+
+
+    <!-- ...............javascript................. -->
+<script>
+  const recipeMap = {
+    "veg biryani": "veg-biryani",
+    "hyderabadi veg biryani": "hyderabadi-veg-biryani",
+    "non veg biryani": "non-veg-biryani",
+    "fried rice": "fried-rice"
+  };
+
+  document.getElementById("searchForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const input = document.getElementById("searchInput").value.trim().toLowerCase();
+    const targetId = recipeMap[input];
+
+    const allCards = document.querySelectorAll(".recipe-card");
+    const recipeSection = document.querySelector(".recipe-section");
+
+    // Hide all recipes first
+    allCards.forEach(card => card.style.display = "none");
+
+    if (targetId) {
+      const matchedCard = document.getElementById(targetId);
+      if (matchedCard) {
+        matchedCard.style.display = "block";
+        recipeSection.style.display = "flex";
+        recipeSection.style.justifyContent = "center";
+        recipeSection.style.flexWrap = "wrap";
+        matchedCard.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      alert("Recipe not found.");
+    }
+  });
+
+  function showAllRecipes() {
+    const allCards = document.querySelectorAll(".recipe-card");
+    const recipeSection = document.querySelector(".recipe-section");
+
+    allCards.forEach(card => {
+      card.style.display = "block";
+    });
+
+    // Reset layout
+    recipeSection.style.display = "grid";
+    recipeSection.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+    recipeSection.style.columnGap = "10px";
+    recipeSection.style.rowGap = "20px";
+
+    // Clear search input
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+      searchInput.value = "";
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
